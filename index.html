@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haii Sayangg</title>
+
+  <!-- ✅ Google Font: Fredoka -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: url('https://files.catbox.moe/x5rvik.jpg') center/cover no-repeat fixed;
+      font-family: 'Fredoka', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 3rem 1rem;
+      position: relative;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.25);
+      padding: 2rem;
+      border-radius: 1.5rem;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      max-width: 90vw;
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #222;
+      margin-bottom: 1.5rem;
+    }
+
+    .cute-btn {
+      background-color: #6C63FF;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-weight: 600;
+    }
+
+    .cute-btn:hover {
+      background-color: #4e46d4;
+      transform: scale(1.05);
+    }
+
+    .musik-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      border: none;
+      border-radius: 12px;
+      padding: 0.7rem 2rem;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .cute-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+      }
+
+      .musik-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔊 Musik autoplay -->
+  <audio id="musik" autoplay loop>
+    <source src="https://files.catbox.moe/uujmen.mp3" type="audio/mpeg" />
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <!-- 🎵 Tombol Musik Tengah Bawah -->
+  <button class="musik-btn" onclick="toggleMusik()">⏯ Musik</button>
+
+  <!-- 💖 Kotak Ucapan -->
+  <div class="container">
+    <h1>Haii sayangg 💖 click ni</h1>
+    <button class="cute-btn" onclick="window.location.href='1th.html'">Lanjut ➜</button>
+  </div>
+
+  <script>
+    const musik = document.getElementById('musik');
+    function toggleMusik() {
+      if (musik.paused) {
+        musik.play();
+      } else {
+        musik.pause();
+      }
+    }
+  </script>
+</body>
+</html>

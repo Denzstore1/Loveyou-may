@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haii Sayangg</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: url('https://files.catbox.moe/x5rvik.jpg') center/cover no-repeat fixed;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem 6rem;
+      gap: 1rem;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.25);
+      padding: 2rem;
+      border-radius: 1.5rem;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      max-width: 90vw;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #222;
+      margin-bottom: 1.5rem;
+    }
+
+    .cute-btn {
+      background-color: #6C63FF;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-weight: bold;
+    }
+
+    .cute-btn:hover {
+      background-color: #4e46d4;
+      transform: scale(1.05);
+    }
+
+    .musik-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      border: none;
+      border-radius: 12px;
+      padding: 0.7rem 2rem;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    .text-box {
+      background-color: rgba(255, 255, 255, 0.25);
+      padding: 1.5rem;
+      border-radius: 1.2rem;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #222;
+      max-width: 90vw;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .cute-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+      }
+
+      .musik-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.5rem;
+      }
+
+      .text-box {
+        font-size: 0.95rem;
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔊 Musik autoplay -->
+  <audio id="musik" autoplay loop>
+    <source src="https://files.catbox.moe/uujmen.mp3" type="audio/mpeg" />
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <!-- 🎵 Tombol Musik Tengah Bawah -->
+  <button class="musik-btn" onclick="toggleMusik()">⏯ Musik</button>
+
+  <!-- 💖 Kotak Ucapan -->
+  <div class="container">
+    <h1>Happy anniversary sayang🤍</h1>
+    <button class="cute-btn" onclick="window.location.href='galery.html'">Lanjut ➜</button>
+  </div>
+
+  <!-- ✨ Kotak Teks Panjang -->
+  <div class="text-box">
+   pencet musik nya duluu,udaah?okee gas, haii cantik, hari ini udah 1 tahun aja anjayy. Makasih ya udah nemenin aku.
+    walau kadang kita berantem, tapi aku gapernah mikir mau udahan sama kmu, seneng bet co masi bisa bareng kamu. gelo sih 🗿ehh kmuu yaa asal kmuu tauu yee? akuu guaa aing i'm sayang bet sama kmuu jadi jangan tinggalin aku yoo kamuu kan lucu,cantik,imut,baik,ramah ngelunjak sikit gapapa laa smekdon aja kn pendek,
+    semangat teruss yaa buat kamuu humaiii!!!! my lop yang cantik yang rajin belajar nya jangan malas malasan broo,jangan telat makan yoo jangan kebanyakan makan seblak jugaa coi gaboleh tu tydak baik kalo kebanyakan
+    jadiii eeee apa yak bingun coi apa lagi yaa yapping nya eee owhh iyaa tanggal jadian tu 01/08/2024
+    anjay udah old coii oh ya 1 lagi jangan deket deket sma cowo coooooo aku cemburuan 🗿 mau cowo kecil,besar,sedeng,sodara,temen,cees atau aplah aku ttep cemburu boyy sory yee agak posesip sikit, kan aku sayang sma kamu klo ga cemburu berarti ga sayang yakann brother??? i lovee youuu sayangkuu cintakuu cantikuuu hatikuu jantungkuuu rumahkuuu semestakuu🤍
+    sorry tydak jelas soalnya yang jelas akuu sayang sama kamu 😆
+  </div>
+
+  <script>
+    const musik = document.getElementById('musik');
+    function toggleMusik() {
+      if (musik.paused) {
+        musik.play();
+      } else {
+        musik.pause();
+      }
+    }
+  </script>
+</body>
+</html>
